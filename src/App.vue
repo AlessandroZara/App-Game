@@ -172,6 +172,12 @@ firebase:{
     background-color: #226622;
     color: #ffffff;
   }
+
+  @media screen  and (max-width:768px) {
+   .page-header {
+     margin-top:15px;
+   }
+  }
   .page-header h2 {
     padding-top: 8px;
   }
