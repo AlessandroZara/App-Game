@@ -52,6 +52,7 @@
        </b-col>
 
       <b-col lg="8">
+        <div class="table-responsive-md">
         <b-table striped hover :items="game" :fields="fields">
           <template con v-slot:cell(Tipo)="data">{{getGameType(data.item.Tipo)}}</template>
     <!-- <template con v-slot:cell(Piattaforma)="data">{{getPiattaforma(data.item.Piattaforma)}}</template> -->
@@ -64,6 +65,7 @@
             <b-btn size="sm" variant ="secondary" @click="onEdit(data.item)" v-b-modal.editGameModal>M</b-btn>
           </template>
         </b-table>
+        </div>
       </b-col>
     </b-row>
     <b-modal id="editGameModal" title="Modifica Game" @ok="onUpdate()">
