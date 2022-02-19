@@ -94,6 +94,7 @@
         ></b-form-select>
         </b-form-group>
     </b-modal>
+    <Cookies/>
   </b-container>
 
 </template>
@@ -101,8 +102,12 @@
 <script>
 import { gamesRef } from "./utils/firebase";
 import { GameTypeEnum, PiattaformaEnum } from "./models/game";
+import Cookies from './components/cookies.vue'
 
 export default {
+components:{
+  Cookies
+},
 firebase:{
   game:gamesRef.orderByChild('Titolo')
 },
